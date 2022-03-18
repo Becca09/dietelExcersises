@@ -87,4 +87,11 @@ public class KataTest {
         boolean result = check.isEven(10);
         assertTrue(result);
     }
+
+    @Test
+    public  void highestNumberTest(){
+        Kata high = new Kata();
+        int result = high.calculateHighestNumber(10, 20 ,30, 40, 50);
+        assertEquals(50, result);
+    }
 }

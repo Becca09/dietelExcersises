@@ -82,7 +82,21 @@ public class Kata {
         if (value % 2 == 0)
             return true;
         else
-        return false;
+            return false;
+    }
+
+    public int calculateHighestNumber(int digit1, int digit2, int digit3, int digit4, int digit5) {
+        if (digit1 > digit2 && digit2 > digit3 && digit3 > digit4 && digit4 > digit5)
+            return digit1;
+        else if (digit2 > digit1 && digit1 > digit3 && digit3 > digit4 && digit4 > digit5)
+            return digit2;
+        else if (digit3 > digit1 && digit1 > digit2 && digit2 > digit4 && digit4 > digit5)
+            return digit3;
+        else if (digit4 > digit3 && digit3 > digit1 && digit1 > digit2 && digit2 > digit5)
+            return digit4;
+        else return digit5;
+
+
     }
 }
 
