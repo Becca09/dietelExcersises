@@ -1,4 +1,5 @@
 package tddClass;
+
 import java.util.Scanner;
 
 public class Kata {
@@ -71,10 +72,17 @@ public class Kata {
     }
 
     public int twoNumber(int firstValue, int secondValue) {
-        if(firstValue >= secondValue)
-        return  firstValue / secondValue;
+        if (firstValue >= secondValue)
+            return firstValue / secondValue;
         else
             return secondValue / firstValue;
+    }
+
+    public boolean isEven(int value) {
+        if (value % 2 == 0)
+            return true;
+        else
+        return false;
     }
 }
 
