@@ -9,6 +9,7 @@ public class Shapes {
                 System.out.print("*");
             System.out.println();
         }
+        System.out.println();
 
         for (int count = 11; count >= 0; count--) {
             for (int j = 0; j < count - 1; j++)
@@ -16,6 +17,7 @@ public class Shapes {
                 System.out.print("*");
             System.out.println();
         }
+        System.out.println();
 
 
         for (int count = 0; count < 10; count++) {
@@ -26,6 +28,7 @@ public class Shapes {
             System.out.println();
 
         }
+        System.out.println();
         for (int count = 10; count > 0; count--) {
             for (int index = 0; index < count - 1; index++)
                 System.out.print(" ");
