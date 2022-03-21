@@ -1,7 +1,5 @@
 package tddClass;
 
-import java.util.Scanner;
-
 public class Kata {
     public int add(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
@@ -97,6 +95,51 @@ public class Kata {
         else return digit5;
 
 
+    }
+
+    public int facctorsOf(int number) {
+
+//        int count = 0;
+//        for (int i = 1; i <= number; i++) {
+//            if (number % i == 0) count++;
+//            }
+//        return count ;
+
+//        int i = 1;
+//        int count = 0;
+//
+//        while (i <= number){
+//            if(number % i == 0) count++;
+//        }
+//        return  count;
+
+        int i = 1;
+        int count = 1;
+        while (i <= number) { i++;
+            if (number % i == 0) count++;
+        }
+        return count;
+    }
+
+    public boolean primeNumber( int num) {
+
+        if(facctorsOf(num) <= 2)
+        return true;
+       return false;
+
+//
+//        if(facctorsOf(num) <= 2)
+//        return true;
+//        return false;
+
+
+//        int i = 1;
+//        int count = 1;
+//        while (i <= num) { i++;
+//            if (num % i == 0) count++;
+//        }
+//        if(count <=2){return true;}
+//        else {return false;}
     }
 }
 

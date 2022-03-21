@@ -94,4 +94,20 @@ public class KataTest {
         int result = high.calculateHighestNumber(10, 20 ,30, 40, 50);
         assertEquals(50, result);
     }
+
+    @Test
+
+    public void factorTest(){
+        Kata actualFactor = new Kata();
+        int result = actualFactor.facctorsOf(30);
+        assertEquals(8, result);
+    }
+
+    @Test
+
+    public void primeNumberTest(){
+        Kata prime = new Kata();
+        boolean result = prime.primeNumber(100);
+        assertFalse(result);
+    }
 }
