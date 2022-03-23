@@ -12,60 +12,57 @@ public class TwelveDaysOfChristmas {
 
 
         switch (day) {
-            case 1:
+            case 1 -> {
                 System.out.println("On the first day of christmas my true love sent to me");
                 verse(day);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.println("On the second day of Christmas my true love sent to me");
                 verse(day);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.println("On the third day of Christmas my true love gave to me ");
                 verse(day);
-                break;
-            case 4:
+            }
+            case 4 -> {
                 System.out.println("On the fourth day of Christmas my true love gave to me ");
                 verse(day);
-                break;
-            case 5:
+            }
+            case 5 -> {
                 System.out.println("On the Fifth day of Christmas my true love gave to me");
                 verse(day);
-                break;
-            case 6:
+            }
+            case 6 -> {
                 System.out.println("On the sixth day of Christmas my true love gave to me");
                 verse(day);
-                break;
-
-            case 7:
+            }
+            case 7 -> {
                 System.out.println("On the seventh day of Christmas my true love gave to me");
                 verse(day);
-                break;
-            case 8:
+            }
+            case 8 -> {
                 System.out.println("On the eighth day of Christmas my true love gave to me");
                 verse(day);
-                break;
-            case 9:
+            }
+            case 9 -> {
                 System.out.println("On the third day of Christmas my true love gave to me");
                 verse(day);
-                break;
-            case 10:
+            }
+            case 10 -> {
                 System.out.println("On the tenth day of Christmas my true love gave to me");
                 verse(day);
-                break;
-            case 11:
+            }
+            case 11 -> {
                 System.out.println("On the eleventh day of Christmas my true love gave to me");
                 verse(day);
-                break;
-            case 12:
+            }
+            case 12 -> {
                 System.out.println("On the twelve day of Christmas my true love gave to me ");
                 verse(day);
-                break;
+            }
         }
 
     }
-
-
     public static void verse(int day) {
         switch (day) {
             case 12:
@@ -81,19 +78,21 @@ public class TwelveDaysOfChristmas {
             case 7:
                 System.out.println("Seven swans a-swimming");
             case 6:
-                System.out.println("Six geese a-laying");
+                System.out.println("Six geese a-laying,");
             case 5:
                 System.out.println("Five golden rings");
             case 4:
-                System.out.println("Four calling birds");
+                System.out.println("Four calling birds,");
             case 3:
                 System.out.println("Three French hens");
             case 2:
-                System.out.println("Two turtle-doves");
+                System.out.println(" Two turtle-doves");
             case 1:
-                System.out.println("A partridge in a pear tree");
+                System.out.println(" A partridge in a pear tree");
         }
 
 
     }
+
+
 }

@@ -15,7 +15,7 @@ public class Shapes {
             for (int j = 0; j < count - 1; j++)
 
                 System.out.print("*");
-            System.out.println();
+            System.out.println(" ");
         }
         System.out.println();
 
