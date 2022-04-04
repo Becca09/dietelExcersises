@@ -1,6 +1,33 @@
 package tddClass;
 
 public class Kata {
+    public static int findMaximumFrom(int[] scores) {
+      int maxNumber = 0;
+      for (int i =0; i< scores.length; i++){
+           if (maxNumber < scores[i])
+               maxNumber = scores[i];}
+        return maxNumber;
+    }
+
+    public static int findMinimumFrom(int[] scores) {
+        int minNumber = scores[0];// the first index
+        for (int i =0; i< scores.length; i++){
+            if ( minNumber > scores[i])
+                minNumber = scores[i];}
+        return minNumber;
+    }
+
+    public static double findAverageFrom(int[] scores) {
+            int sum = 0;
+            double average = 0;
+
+            for ( int i = 0; i< scores.length; i++){
+                sum = sum + scores[i];
+                average = sum / scores.length;
+            }
+        return  average;
+    }
+
     public int add(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
     }
@@ -141,6 +168,37 @@ public class Kata {
 //        if(count <=2){return true;}
 //        else {return false;}
     }
+
+//    public int arrayOfElementsMin() {
+//        for (int i = 0; i < scores.length; i++) {
+//        }
+//        int smallestNum = 45;
+//        for (int i = 0; i < scores.length; i++) {
+//            if (smallestNum > scores[i]) {
+//
+//                smallestNum = scores[i];
+//            }
+//        }
+//        System.out.print( " The Smallest number is " + smallestNum);
+//
+//        return smallestNum;
+//    }
+//
+//    public double arrayOfElementsAverage() {
+//        int[] scores = new int[]{34, 23, 14, 45, 23};
+//        int i;
+//        for (i = 0; i < scores.length; i++) {
+//        }
+//        int sum = 0;
+//        double average;
+//
+//        sum += scores[i];
+//
+//        average = sum/scores.length;
+//        System.out.print("The average number is " + average);
+//        return average;
+//    }
+
 }
 
 

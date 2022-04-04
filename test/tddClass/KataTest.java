@@ -8,9 +8,9 @@ public class KataTest {
     @Test
     public void addTest() {
         Kata calculator = new Kata();
-        int result = calculator.add(4, 3);
+        int result = calculator.add(4, 8);
 
-        assertEquals(7, result);
+        assertEquals(12, result);
 
     }
 
@@ -89,15 +89,15 @@ public class KataTest {
     }
 
     @Test
-    public  void highestNumberTest(){
+    public void highestNumberTest() {
         Kata high = new Kata();
-        int result = high.calculateHighestNumber(10, 20 ,30, 40, 50);
+        int result = high.calculateHighestNumber(10, 20, 30, 40, 50);
         assertEquals(50, result);
     }
 
     @Test
 
-    public void factorTest(){
+    public void factorTest() {
         Kata actualFactor = new Kata();
         int result = actualFactor.facctorsOf(30);
         assertEquals(8, result);
@@ -105,9 +105,29 @@ public class KataTest {
 
     @Test
 
-    public void primeNumberTest(){
+    public void primeNumberTest() {
         Kata prime = new Kata();
         boolean result = prime.primeNumber(100);
         assertFalse(result);
     }
+
+    @Test
+
+    public void maximumNumberInArrayTest() {
+        int[] scores = {34, 23, 14, 45, 23};
+        assertEquals(45, Kata.findMaximumFrom(scores));
+    }
+
+    @Test
+    public void minimumNumberInArrayTest() {
+        int[] scores = {34, 23, 14, 45, 23};
+        assertEquals(14, Kata.findMinimumFrom(scores));
+    }
+
+    @Test
+    public void averageNumberInArrayTest() {
+        int[] scores = {34, 23, 14, 45, 23};
+        assertEquals(27.0, Kata.findAverageFrom(scores));
+    }
+
 }
