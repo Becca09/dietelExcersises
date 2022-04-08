@@ -7,4 +7,6 @@ public class Customer {
     private String name;
     private int phoneNumber;
     private String password;
+    private BillingInformation billingInformation;
+    private ShoppingCart shoppingCart;
 }
