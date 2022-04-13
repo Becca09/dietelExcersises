@@ -37,6 +37,7 @@ public class CommisionCalulator {
                     break;
                 case 4:
                     count4++;
+                    break;
                 default:
                     System.out.println("input a valid number between 1-4");
                     break;
@@ -46,7 +47,7 @@ public class CommisionCalulator {
             item = input.nextInt();
         }
         double totalEarnings = salary + (commission * ((item1 * count1) + (item2 * count2) + (item3 * count3) + (item4 * count4)));
-        System.out.printf("%s, your earning for last week was $%.2f: ",name, totalEarnings);
+        System.out.printf("%s, your earning for last week was $%.2f: ", name, totalEarnings);
     }
 
-    }
+}

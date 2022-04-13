@@ -1,13 +1,13 @@
 package classWorks.eBanking;
 
-public class Accounts {
-
+public class Accounting
+{
     private final String ACCOUNT_NUMBER;
     private final String fullName;
     private int balance;
     private String pin;
 
-    public Accounts(String accountNumber, String lastName, String firstName, String pin) {
+    public Accounting(String accountNumber, String lastName, String firstName, String pin) {
         ACCOUNT_NUMBER = accountNumber;
         this.fullName = lastName + " " + firstName;
         this.pin = pin;
@@ -23,7 +23,6 @@ public class Accounts {
     }
 
     public void deposit(int amount) {
-
         balance += amount;
     }
 
@@ -39,4 +38,12 @@ public class Accounts {
         }
     }
 
+    @Override
+    public  String toString(){
+        return String.format("""
+                Account Name:   %s
+                Account Number: %s
+                Balance:        %d
+                """, fullName, ACCOUNT_NUMBER, balance);
+    }
 }
