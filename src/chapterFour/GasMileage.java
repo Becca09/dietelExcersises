@@ -29,7 +29,5 @@ public class GasMileage {
         double totalMilesPerGallon = total * 1.0;
         System.out.printf("The total miles per gallon for all trips is %.2f",totalMilesPerGallon);
 
-
-
     }
 }

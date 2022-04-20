@@ -26,21 +26,11 @@ public class CommisionCalulator {
         while (item != -1) {
 
             switch (item) {
-                case 1:
-                    count1++;
-                    break;
-                case 2:
-                    count2 = count2 + 1;
-                    break;
-                case 3:
-                    count3++;
-                    break;
-                case 4:
-                    count4++;
-                    break;
-                default:
-                    System.out.println("input a valid number between 1-4");
-                    break;
+                case 1 -> count1++;
+                case 2 -> count2 = count2 + 1;
+                case 3 -> count3++;
+                case 4 -> count4++;
+                default -> System.out.println("input a valid number between 1-4");
             }
 
             System.out.println("Enter The Number of items sold, use -1 to stop");
