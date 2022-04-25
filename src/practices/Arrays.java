@@ -31,7 +31,17 @@ public class Arrays {
                 System.out.println(element + " is not in index " + i);
             }
             //how delete random elements
-
+            // why is the @ sign showing
         }
+    }
+
+    public void searchElementInArray(int [] object1, int element){
+        java.util.Arrays.sort(object1);
+       int middleElement = object1.length / 2;
+      if (element >= middleElement ){
+          for (int i = middleElement; i < object1.length; i++){
+
+          }
+       }
     }
 }
