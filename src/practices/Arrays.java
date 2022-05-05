@@ -40,7 +40,6 @@ public class Arrays {
        int middleElement = object1.length / 2;
       if (element >= middleElement ){
           for (int i = middleElement; i < object1.length; i++){
-
           }
        }
     }
