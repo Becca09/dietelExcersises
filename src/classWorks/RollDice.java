@@ -36,9 +36,6 @@ public class RollDice {
 //                }
 //            }
 //
-//
-//        }
-//    }
 public static void main(String[] args) {
     int roll = rollDice();
     status(roll);

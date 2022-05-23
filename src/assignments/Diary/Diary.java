@@ -35,7 +35,7 @@ public class Diary {
 
     public Entry searchEntry(String title) {
         for (Entry entry:entries) {
-            if (title.equals(entry.getTitle())){
+            if (title.equalsIgnoreCase(entry.getTitle())){
                 return entry;
             }
         }
@@ -64,8 +64,8 @@ public class Diary {
         return password;
     }
 
-    public String getEmail() {
-        return email;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
 }
 //(Objects.equals(title, entry.getTitle()))

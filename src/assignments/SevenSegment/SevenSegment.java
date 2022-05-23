@@ -3,6 +3,10 @@ package assignments.SevenSegment;
 public class SevenSegment {
     static String[][] sevenSegment = new String[5][4];
 
+    public static String[][] getSevenSegment() {
+        return sevenSegment;
+    }
+
     public static void setA() {
         for (int i = 0; i <= 0; i++) {
             for (int j = 0; j <= 3; j++) {

@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Entry {
     private String body;
-    private String timeStamp;
+    private LocalDateTime timeStamp;
     private String title;
 
     public String getTitle() {
@@ -13,6 +13,10 @@ public class Entry {
     }
 
     public String getTimeStamp() {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("E, dd-MM-yyyy, hh:mm a");
+       String timeStamp = dateTimeFormatter.format(this.timeStamp);
+
+
         return timeStamp;
     }
 
@@ -24,9 +28,7 @@ public class Entry {
     public Entry(String title, String body) {
         this.title = title;
         this.body = body;
-
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("E, dd-MM-yyyy, hh:mm a");
-        timeStamp = dateTimeFormatter.format(LocalDateTime.now());
+        timeStamp = LocalDateTime.now();
 
     }
 

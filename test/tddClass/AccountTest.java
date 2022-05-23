@@ -43,7 +43,7 @@ public class AccountTest {
     }
 
     @Test
-    public  void despositWithdrawTes(){
+    public  void depositWithdrawTest(){
         Account ucheAccount = new Account();
 
         //when

@@ -1,4 +1,4 @@
-package chapterNineProject;
+package chapterNine.chapterNineProject;
 
 public class Animal extends LivingThings{
     public Animal(){
