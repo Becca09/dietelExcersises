@@ -43,15 +43,37 @@ public class Turtle {
             currentDirection = newDirection;
         }
 
-        public void move(int noOfSteps) {
+        public void move(int noOfSteps, SketchPad sketchPad) {
+            if (isPenDown() == true) {
+                if (currentDirection == EAST) writeOnColumn(noOfSteps, sketchPad);
+
+            }
+
             if (currentDirection == EAST) increaseColumnBy(noOfSteps);
             else if (currentDirection == SOUTH) increaseRowBy(noOfSteps);
             else if (currentDirection == WEST) decreaseColumnBy(noOfSteps);
+            else if (currentDirection == NORTH) decreaseRowBy(noOfSteps);
         }
 
-        private void decreaseColumnBy(int noOfSteps) {
+    private void writeOnColumn(int noOfSteps, SketchPad sketchPad) {
+            int [][] floor = sketchPad.getFloor();
+            int row = currentPosition.getRow();
+            int column = currentPosition.getColumn();
+            noOfSteps = noOfSteps + column;
+        for (int i = column; i <column+noOfSteps ; i++) {
+            floor[row][i] = 1;
+        }
+
+    }
+
+    private void decreaseRowBy(int noOfSteps) {
+            int currentRowPosition = currentPosition.getRow();
+            currentPosition.setRow(currentRowPosition - noOfSteps + 1);
+    }
+
+    private void decreaseColumnBy(int noOfSteps) {
             int currentColumnPosition = currentPosition.getColumn();
-            currentPosition.setColumn(currentColumnPosition - noOfSteps - 1);
+            currentPosition.setColumn(currentColumnPosition - noOfSteps + 1);
         }
 
         private void increaseColumnBy(int noOfSteps) {
@@ -67,4 +89,5 @@ public class Turtle {
         public Position getCurrentPosition() {
             return currentPosition;
         }
+
 }

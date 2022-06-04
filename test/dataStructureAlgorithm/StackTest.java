@@ -1,6 +1,5 @@
-package dsa;
+package dataStructureAlgorithm;
 
-import classWorks.dsa.Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

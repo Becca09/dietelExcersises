@@ -1,4 +1,4 @@
-package classWorks.dsa;
+package dataStructureAlgorithm;
 
 public class Stack {
     private int numberOfElements;

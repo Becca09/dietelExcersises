@@ -35,8 +35,6 @@ public class ArrayList implements List{
                 counter++;
             }
         }
-
-
     }
 
     @Override
@@ -89,7 +87,7 @@ public class ArrayList implements List{
 
     }
 
-    public void implementRemoval(int i) {
+    private void implementRemoval(int i) {
         db[i] = null;
         counter--;
         for (int j = i; j < length - 1; j++) {

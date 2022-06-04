@@ -3,12 +3,24 @@ package assignments;
 public class Set {
     public int sumOfDistinctFigure(int[] array, int[] array2) {
         int sum = 0;
-        for (int k : array) {
-            for (int i : array2) {
-                if (k == i) {
-                    sum = sum + k;
-                }
+        for (int i = 0; i < array.length; i++) {
+            int counter = 0;
+            for (int j = 0; j < array2.length; j++) {
+                if (array[i] != array2[j])
+                    counter++;
             }
+            if (counter == array2.length)
+                sum = sum + array[i];
+        }
+
+        for (int i = 0; i < array2.length; i++) {
+            int counter = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array2[i] != array[j])
+                    counter++;
+            }
+            if (counter == array.length)
+                sum = sum + array2[i];
         }
         return sum;
     }

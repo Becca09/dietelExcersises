@@ -9,8 +9,10 @@ import static turtle.Directions.*;
 
 class TurtleTest {
     private  Turtle ijapa;
+    private  SketchPad sketchPad;
     @BeforeEach public void setUp(){
         ijapa = new Turtle();
+        sketchPad = new SketchPad(5,5);
     }
 
 @Test public void turtleExistTest(){
@@ -94,8 +96,37 @@ void turtleCanTurnLeftWhileFacingNorthTest() {
     }
 
     @Test public void turtleCanMoveForwardFacingEastTest(){
-        ijapa.move(5);
-        assertEquals(new Position(0,4), ijapa.getCurrentPosition());
+        ijapa.move(3, sketchPad);
+        assertEquals(new Position(0,2), ijapa.getCurrentPosition());
+        ijapa.move(2, sketchPad);
+        assertEquals(new Position(0,3), ijapa.getCurrentPosition());
+
+    }
+
+    @Test public void turtleCanMoveForwardFacingSouthTest(){
+        ijapa.turnRight();
+        assertSame(SOUTH, ijapa.getCurrentDirection());
+
+
+        ijapa.move(3, sketchPad);
+        assertEquals(new Position(2,0), ijapa.getCurrentPosition());
+        ijapa.move(2, sketchPad);
+        assertEquals(new Position(3,0), ijapa.getCurrentPosition());
+    }
+    //    todo can move facing north and west
+    @Test public void turtleCanWriteFacingEastTest(){
+        ijapa.penDown();
+        SketchPad sketchPad = new SketchPad(5,5);
+        ijapa.move(5, sketchPad);
+        String expected = """
+                * * * * *\s
+                    \s
+                    \s
+                    \s
+                    \s
+                """;
+        assertEquals(expected, sketchPad.toString());
+        assertEquals(new Position(0, 4), ijapa.getCurrentPosition());
 
     }
 }
