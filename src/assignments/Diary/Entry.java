@@ -14,7 +14,7 @@ public class Entry {
 
     public String getTimeStamp() {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("E, dd-MM-yyyy, hh:mm a");
-       String timeStamp = dateTimeFormatter.format(this.timeStamp);
+        String timeStamp = dateTimeFormatter.format(this.timeStamp);
 
 
         return timeStamp;
